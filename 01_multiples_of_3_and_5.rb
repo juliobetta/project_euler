@@ -9,7 +9,7 @@ require('rspec')
 # IMPLEMENTATION
 # ===================================================================
 def calculate_below(n)
-  (1...n).map{|n| n if n % 3 == 0 or n % 5 == 0}.compact!.reduce(:+)
+  (1...n).select{|n| n if n % 3 == 0 or n % 5 == 0}.reduce(:+)
 end
 
 
