@@ -1,9 +1,12 @@
 require 'rspec'
 
 # LARGEST PALINDROME PRODUCT
-# A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-# Find the largest palindrome made from the product of two 3-digit numbers.
+# A palindromic number reads the same both ways. The largest palindrome made from the product of two
+# 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two
+# 3-digit numbers.
 
+# IMPLEMENTATION
+# ===================================================================
 def largest_palindrome_product(n = 2)
   n = n.to_i
 
@@ -24,6 +27,8 @@ def largest_palindrome_product(n = 2)
   return max
 end
 
+# SPEC
+# ===================================================================
 describe 'Last Palindrome Product' do
   it 'should be 9009, given n = 2' do
     largest_palindrome_product(2).should == 9009
