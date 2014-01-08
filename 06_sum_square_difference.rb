@@ -16,10 +16,7 @@ require 'rspec'
 # IMPLEMENTATION
 # ===================================================================
 def calculate_square_difference(range = 1..10)
-  sum1 = range.map{|n| n**2}.inject(:+)
-  sum2 = range.reduce(:+)**2
-
-  return sum2-sum1
+  range.reduce(:+)**2 - range.map{|n| n**2}.inject(:+)
 end
 
 
